@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Results</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button routerLink='/category'></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <h1>You got a score of : {{score}} - points</h1>
+    <h1>Percentage: {{percentage}}<span>&#37;</span></h1>
+    <div *ngIf="percentage > 60 else templeFail">
+      
+        <div class="success-checkmark">
+          <div class="check-icon">
+            <span class="icon-line line-tip"></span>
+            <span class="icon-line line-long"></span>
+            <div class="icon-circle"></div>
+            <div class="icon-fix"></div>
+          </div>
+        </div>
+     
+    </div>
+    <ng-template #templeFail>
+
+        <div class="cross-icon cross-delete animateDeleteIcon" style="display: block;">
+          <span class="cross-x-mark animateXMark"></span>
+          <span class="cross-delete-line cross-delete-left"></span>
+          <span class="cross-delete-line cross-delete-right"></span>
+        </div>
+      </ng-template>
+  </div>
+
+ 
+
+  
+</ion-content>

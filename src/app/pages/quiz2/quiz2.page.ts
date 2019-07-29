@@ -1,0 +1,67 @@
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
+@Component({
+  selector: 'app-quiz2',
+  templateUrl: './quiz2.page.html',
+  styleUrls: ['./quiz2.page.scss'],
+})
+export class Quiz2Page implements OnInit {
+  myRadio0: string;
+  myRadio1: string;
+  myRadio2: string;
+  myRadio3: string;
+  myRadio4: string;
+  score: number = 0;
+  percentage;
+
+  hAnswers: any[] = ['Output Device', 'USB Ports','executes instructions from the software', 'Power Supply', 'Platter' ]
+  name;
+  email;
+
+  constructor(private router: Router,private route: ActivatedRoute) { }
+
+  ngOnInit() {
+
+    this.route.queryParams
+    .subscribe(params => {
+      this.name = params.name;
+      this.email = params.email;
+    });
+     
+  }
+   //calculate score
+   getResuts() {
+
+    if (this.myRadio0 == this.hAnswers[0]) {
+      this.score += 1;
+    }
+    if (this.myRadio1 == this.hAnswers[1]) {
+      this.score += 1;
+    }
+    if (this.myRadio2 == this.hAnswers[2]) {
+      this.score += 1;
+    }
+    if (this.myRadio3 == this.hAnswers[3]) {
+      this.score += 1;
+    }
+    if (this.myRadio4 == this.hAnswers[4]) {
+      this.score += 1;
+    }
+
+    return this.score;
+
+  }
+  resultsPage() {
+    this.score = this.getResuts();
+    this.percentage = this.getPer(this.score);
+
+    this.router.navigate(['/results'], { queryParams: { percentage: this.percentage, score:this.score  } });
+  }
+
+  getPer(score){
+
+    this.percentage= (score/5)*100;
+    return this.percentage;
+      }
+}

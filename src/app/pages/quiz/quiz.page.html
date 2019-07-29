@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Network Quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-radio-group [(ngModel)]="myRadio0">
+      <ion-list-header>
+        <ion-label>{{networkQuestions[0]}}</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Node Interface Card</ion-label>
+        <ion-radio slot="start" value="Node Interface Card" ></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>{{networkAnswers[0]}}</ion-label>
+        <ion-radio slot="start" value="{{networkAnswers[0]}}"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>New Interface Card</ion-label>
+        <ion-radio slot="start" value="New Interface Card"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <ion-radio-group [(ngModel)]="myRadio1">
+        <ion-list-header>
+          <ion-label>{{networkQuestions[1]}}</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Level 2</ion-label>
+          <ion-radio slot="start" value="Level 2" ></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>{{networkAnswers[1]}}</ion-label>
+          <ion-radio slot="start" value="{{networkAnswers[1]}}"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Level 0</ion-label>
+          <ion-radio slot="start" value="Level 0"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+
+  <ion-radio-group [(ngModel)]="myRadio2">
+      <ion-list-header>
+        <ion-label>{{networkQuestions[2]}}</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>0.0.0.1</ion-label>
+        <ion-radio slot="start" value="0.0.0.1" ></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>{{networkAnswers[2]}}</ion-label>
+        <ion-radio slot="start" value="{{networkAnswers[2]}}"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>255.255.255.255</ion-label>
+        <ion-radio slot="start" value="255.255.255.255"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+  <ion-radio-group [(ngModel)]="myRadio3">
+      <ion-list-header>
+        <ion-label>{{networkQuestions[3]}}</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>1 024Mbps</ion-label>
+        <ion-radio slot="start" value="1 024Mbps" ></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>{{networkAnswers[3]}}</ion-label>
+        <ion-radio slot="start" value="{{networkAnswers[3]}}"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>2 048Mbps</ion-label>
+        <ion-radio slot="start" value="2 048Mbps"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  <ion-radio-group [(ngModel)]="myRadio4">
+      <ion-list-header>
+        <ion-label>{{networkQuestions[4]}}</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>{{networkAnswers[4]}}</ion-label>
+        <ion-radio slot="start" value="{{networkAnswers[4]}}" ></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Linked Area Network</ion-label>
+        <ion-radio slot="start" value="Linked Area Network"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Liked Area Network</ion-label>
+        <ion-radio slot="start" value="Liked Area Network"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+ 
+  <ion-button (click)="resultsPage()"> Submit Answers</ion-button>
+
+
+</ion-content>

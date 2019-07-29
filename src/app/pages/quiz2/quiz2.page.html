@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>quiz2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-radio-group [(ngModel)]="myRadio0">
+      <ion-list-header>
+        <ion-label ><span>What type of device is this?</span><br><img src="/assets/icon/images/23-512.png" alt="monitor"></ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label >{{hAnswers[0]}}</ion-label>
+        <ion-radio slot="start" value="{{hAnswers[0]}}" ></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Input Device</ion-label>
+        <ion-radio slot="start" value="Input Device"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>External Device </ion-label>
+        <ion-radio slot="start" value="External Device"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+ 
+  <ion-radio-group [(ngModel)]="myRadio1">
+      <ion-list-header>
+        <ion-label ><span>What kind of ports are these?</span><br><img src="/assets/icon/images/usb-ports-located-3.1-800x800.jpg" alt="ports"></ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Serial Ports </ion-label>
+        <ion-radio slot="start" value="Cool down the PC" ></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>{{hAnswers[1]}}</ion-label>
+        <ion-radio slot="start" value="{{hAnswers[1]}}"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Parallel Ports </ion-label>
+        <ion-radio slot="start" value="none of the above"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  
+  <ion-radio-group [(ngModel)]="myRadio2">
+      <ion-list-header>
+        <ion-label ><span>What is the name of the component below:</span><br><img src="/assets/icon/images/core-i9-640x353.jpg" alt="proccesor"></ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Cool down the PC</ion-label>
+        <ion-radio slot="start" value="Cool down the PC" ></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>{{hAnswers[2]}}</ion-label>
+        <ion-radio slot="start" value="{{hAnswers[2]}}"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>none of the above </ion-label>
+        <ion-radio slot="start" value="none of the above"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+      <ion-radio-group [(ngModel)]="myRadio3">
+          <ion-list-header>
+            <ion-label ><span>What is the name of the component below:</span><br><img src="/assets/icon/images/FLTZG2OH130PCT8.LARGE_.jpg" alt="power supply"></ion-label>
+          </ion-list-header>
+      
+          <ion-item>
+            <ion-label>Fan</ion-label>
+            <ion-radio slot="start" value="Fan" ></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Generator</ion-label>
+            <ion-radio slot="start" value="Generator"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>{{hAnswers[3]}} </ion-label>
+            <ion-radio slot="start" value="{{hAnswers[3]}}"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+
+  <ion-radio-group [(ngModel)]="myRadio4">
+      <ion-list-header>
+        <ion-label><span>Give the name of the component pointed by 1.</span><br><img src="/assets/icon/images/hdd.webp" alt="hard disk"><img src="/assets/icon/images/hddzoom.jpg" alt="hard disk"></ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Blue ray</ion-label>
+        <ion-radio slot="start" value="Blue ray" ></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>{{hAnswers[4]}}</ion-label>
+        <ion-radio slot="start" value="{{hAnswers[4]}}"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>CD </ion-label>
+        <ion-radio slot="start" value="CD"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+  
+  <ion-button (click)="resultsPage()"> Submit Answers</ion-button>
+</ion-content>

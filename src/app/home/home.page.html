@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h1><span>Welcome To Computer Quiz</span></h1>
+    
+  <div class="form-style-6">
+    <h1>Details</h1>
+    <form>
+    <input type="text" [(ngModel)]="name" name="field1" placeholder="Your Name" />
+    <input type="email" [(ngModel)]="email" name="field2" placeholder="Email Address" />
+    <input type="submit" (click)="onSub()" value="Submit" />
+    </form>
+    </div>
+</ion-content>

@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>quiz1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+    <ion-radio-group [(ngModel)]="myRadio0">
+        <ion-list-header>
+          <ion-label>{{cliQuestions[0]}}</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>ld</ion-label>
+          <ion-radio slot="start" value="ld" ></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>{{cliAnswers[0]}}</ion-label>
+          <ion-radio slot="start" value="{{cliAnswers[0]}}"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>list </ion-label>
+          <ion-radio slot="start" value="list"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+  
+    <ion-radio-group [(ngModel)]="myRadio1">
+        <ion-list-header>
+          <ion-label>{{cliQuestions[1]}}</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>{{cliAnswers[1]}}</ion-label>
+          <ion-radio slot="start" value="{{cliAnswers[1]}}" ></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>move directory</ion-label>
+          <ion-radio slot="start" value="move directory"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>open new directory</ion-label>
+          <ion-radio slot="start" value="open new directory"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    
+    <ion-radio-group [(ngModel)]="myRadio2">
+        <ion-list-header>
+          <ion-label>{{cliQuestions[2]}}</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>pwd</ion-label>
+          <ion-radio slot="start" value="pwd" ></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>{{cliAnswers[2]}}</ion-label>
+          <ion-radio slot="start" value="{{cliAnswers[2]}}"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>none of the above</ion-label>
+          <ion-radio slot="start" value="none of the above"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+  
+   <ion-radio-group [(ngModel)]="myRadio3">
+        <ion-list-header>
+          <ion-label>{{cliQuestions[3]}}</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>{{cliAnswers[3]}}</ion-label>
+          <ion-radio slot="start" value="{{cliAnswers[3]}}" ></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Changing the wallpaper</ion-label>
+          <ion-radio slot="start" value="Changing the wallpaper"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>opening a new browser</ion-label>
+          <ion-radio slot="start" value="opening a new browser"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+
+    <ion-radio-group [(ngModel)]="myRadio4">
+        <ion-list-header>
+          <ion-label>{{cliQuestions[4]}}</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>{{cliAnswers[4]}}</ion-label>
+          <ion-radio slot="start" value="{{cliAnswers[4]}}" ></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Bring anther screen</ion-label>
+          <ion-radio slot="start" value="Bring anther screen"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>None of the above</ion-label>
+          <ion-radio slot="start" value="None of the above"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+
+    <ion-button (click)="resultsPage()"> Submit Answers</ion-button>
+   
+
+
+</ion-content>
