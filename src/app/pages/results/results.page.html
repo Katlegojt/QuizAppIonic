@@ -11,7 +11,9 @@
   <div>
     <h1>You got a score of : {{score}} - points</h1>
     <h1>Percentage: {{percentage}}<span>&#37;</span></h1>
+    <!-- <h2>with {{counter}} seconds left</h2> -->
     <div *ngIf="percentage > 60 else templeFail">
+
       
         <div class="success-checkmark">
           <div class="check-icon">
@@ -21,6 +23,7 @@
             <div class="icon-fix"></div>
           </div>
         </div>
+        <ion-text color="green">Test Passed</ion-text>
      
     </div>
     <ng-template #templeFail>
@@ -30,6 +33,7 @@
           <span class="cross-delete-line cross-delete-left"></span>
           <span class="cross-delete-line cross-delete-right"></span>
         </div>
+        <ion-text>Test Failed</ion-text>
       </ng-template>
   </div>
 

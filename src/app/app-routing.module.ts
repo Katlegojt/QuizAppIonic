@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'quiz1', loadChildren: './pages/quiz1/quiz1.module#Quiz1PageModule' },
   { path: 'quiz2', loadChildren: './pages/quiz2/quiz2.module#Quiz2PageModule' },
   { path: 'results', loadChildren: './pages/results/results.module#ResultsPageModule' },
+  
 ];
 
 @NgModule({

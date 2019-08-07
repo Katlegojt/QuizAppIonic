@@ -1,6 +1,10 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Network Quiz</ion-title>
+    <ion-label color="primary" slot="end">{{counter}}</ion-label>
+    <ion-buttons slot="start">
+        <ion-back-button routerLink='/category'></ion-back-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -12,13 +16,13 @@
       </ion-list-header>
   
       <ion-item>
-        <ion-label>Node Interface Card</ion-label>
-        <ion-radio slot="start" value="Node Interface Card" ></ion-radio>
-      </ion-item>
-  
-      <ion-item>
         <ion-label>{{networkAnswers[0]}}</ion-label>
         <ion-radio slot="start" value="{{networkAnswers[0]}}"></ion-radio>
+      </ion-item> 
+  
+      <ion-item>
+        <ion-label>Node Interface Card</ion-label>
+        <ion-radio slot="start" value="Node Interface Card"></ion-radio>
       </ion-item>
   
       <ion-item>

@@ -1,6 +1,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>quiz2</ion-title>
+    <ion-label color="primary" slot="end">{{counter}}</ion-label>
+    <ion-buttons slot="start">
+        <ion-back-button routerLink='/category'></ion-back-button>
+        
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -8,7 +13,7 @@
 
   <ion-radio-group [(ngModel)]="myRadio0">
       <ion-list-header>
-        <ion-label ><span>What type of device is this?</span><br><img src="/assets/icon/images/23-512.png" alt="monitor"></ion-label>
+        <ion-label ><ion-text>What type of device is this?</ion-text><br><img src="/assets/icon/images/23-512.png" alt="monitor"></ion-label>
       </ion-list-header>
   
       <ion-item>
@@ -30,7 +35,7 @@
  
   <ion-radio-group [(ngModel)]="myRadio1">
       <ion-list-header>
-        <ion-label ><span>What type of ports are these?</span><br><img src="/assets/icon/images/usb-ports-located-3.1-800x800.jpg" alt="ports"></ion-label>
+        <ion-label ><ion-text>What type of ports are these?</ion-text><br><img src="/assets/icon/images/usb-ports-located-3.1-800x800.jpg" alt="ports"></ion-label>
       </ion-list-header>
   
       <ion-item>
@@ -51,7 +56,7 @@
   
   <ion-radio-group [(ngModel)]="myRadio2">
       <ion-list-header>
-        <ion-label ><span>What is the name of the component below:</span><br><img src="/assets/icon/images/core-i9-640x353.jpg" alt="proccesor"></ion-label>
+        <ion-label ><ion-text>What is the name of the component below:</ion-text><br><img src="/assets/icon/images/core-i9-640x353.jpg" alt="proccesor"></ion-label>
       </ion-list-header>
   
       <ion-item>
@@ -72,7 +77,7 @@
 
       <ion-radio-group [(ngModel)]="myRadio3">
           <ion-list-header>
-            <ion-label ><span>What is the name of the component below:</span><br><img src="/assets/icon/images/FLTZG2OH130PCT8.LARGE_.jpg" alt="power supply"></ion-label>
+            <ion-label ><ion-text>What is the name of the component below:</ion-text><br><img src="/assets/icon/images/FLTZG2OH130PCT8.LARGE_.jpg" alt="power supply"></ion-label>
           </ion-list-header>
       
           <ion-item>
@@ -93,7 +98,7 @@
 
   <ion-radio-group [(ngModel)]="myRadio4">
       <ion-list-header>
-        <ion-label><span>Give the name of the component pointed by 1.</span><br><img src="/assets/icon/images/hdd.webp" alt="hard disk"><img src="/assets/icon/images/hddzoom.jpg" alt="hard disk"></ion-label>
+        <ion-label><ion-text>Give the name of the component pointed by 1.</ion-text><br><img src="/assets/icon/images/hdd.webp" alt="hard disk"><img src="/assets/icon/images/hddzoom.jpg" alt="hard disk"></ion-label>
       </ion-list-header>
   
       <ion-item>

@@ -2,18 +2,23 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.page.html',
   styleUrls: ['./quiz.page.scss'],
 })
 export class QuizPage implements OnInit {
+
   myRadio0: string;
   myRadio1: string;
   myRadio2: string;
   myRadio3: string;
   myRadio4: string;
   score: number = 0;
+  counter: number ;
+  interval;
+  networkResults: number;
 
   name;
   email;
@@ -28,22 +33,25 @@ export class QuizPage implements OnInit {
 
 
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(private router: Router, private route: ActivatedRoute, ) {
 
-    
-    
+    this.startCountdown();
+    this.networkResults = this.score;
+
+
+
   }
 
   ngOnInit() {
 
     this.route.queryParams
-    .subscribe(params => {
-      this.name = params.name;
-      this.email = params.email;
-    });
-     
-    
-  
+      .subscribe(params => {
+        this.name = params.name;
+        this.email = params.email;
+      });
+
+
+
   }
 
   //calculate score
@@ -70,20 +78,47 @@ export class QuizPage implements OnInit {
   }
 
 
-  
+
 
   resultsPage() {
+    this.counter = 0;
     this.score = this.getResuts();
-   this.percentage = this.getPer(this.score);
-    this.router.navigate(['/results'], { queryParams: { name: this.name , percentage: this.percentage, score:this.score  } });
+    this.networkResults = this.score;
+    this.percentage = this.getPer(this.score);
+    this.router.navigate(['/results'], { queryParams: { counter: this.counter, percentage: this.percentage, score: this.score, networkResults:this.networkResults } });
 
   }
+  //percantage calculator
+  getPer(score) {
 
-  getPer(score){
+    this.percentage = (score / 5) * 100;
+    return this.percentage;
+  }
+  //count down timer
+  startCountdown() {
+    this.counter = 15;
 
-this.percentage= (score/5)*100;
-return this.percentage;
+    this.interval = setInterval(() => {
+
+      this.counter--;
+
+      if (this.counter <= 0) {
+
+        // The code here will run when
+        // the timer has reached zero.
+        clearInterval(this.interval);
+        this.score = this.getResuts();
+        this.networkResults = this.score;
+        this.percentage = this.getPer(this.score);
+        this.router.navigate(['/results'], { queryParams: { counter: this.counter, percentage: this.percentage, score: this.score, networkResults:this.networkResults } });
+
+        console.log('Ding!');
+      };
+    }, 1000);
+
+    return this.counter;
   }
 
-  
+
+
 }

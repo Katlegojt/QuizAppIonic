@@ -14,12 +14,16 @@ export class Quiz2Page implements OnInit {
   myRadio4: string;
   score: number = 0;
   percentage;
+  counter;
+  interval;
 
   hAnswers: any[] = ['Output Device', 'USB Ports','executes instructions from the software', 'Power Supply', 'Platter' ]
   name;
   email;
 
-  constructor(private router: Router,private route: ActivatedRoute) { }
+  constructor(private router: Router,private route: ActivatedRoute) {
+    this.startCountdown();
+   }
 
   ngOnInit() {
 
@@ -53,6 +57,7 @@ export class Quiz2Page implements OnInit {
 
   }
   resultsPage() {
+    this.counter= 0;
     this.score = this.getResuts();
     this.percentage = this.getPer(this.score);
 
@@ -60,8 +65,32 @@ export class Quiz2Page implements OnInit {
   }
 
   getPer(score){
-
+    this.counter=0;
     this.percentage= (score/5)*100;
     return this.percentage;
+      }
+
+
+      startCountdown() {
+        this.counter = 15;
+    
+        this.interval = setInterval(() => {
+    
+          this.counter--;
+    
+          if (this.counter <= 0) {
+    
+            // The code here will run when
+            // the timer has reached zero.
+            clearInterval(this.interval);
+            this.score = this.getResuts();
+            this.percentage = this.getPer(this.score);
+            this.router.navigate(['/results'], { queryParams: { counter: this.counter, percentage: this.percentage, score: this.score } });
+    
+            console.log('Ding!');
+          };
+        }, 1000);
+    
+        return this.counter;
       }
 }

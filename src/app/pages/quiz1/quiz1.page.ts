@@ -15,6 +15,9 @@ export class Quiz1Page implements OnInit {
   myRadio4: string;
   score: number = 0;
   name;
+  counter;
+  interval;
+  cliResults;
   
   percentage;
 
@@ -22,7 +25,11 @@ export class Quiz1Page implements OnInit {
   'What is the ifConfig command used for?', 'what does BASH stand for?'];
 cliAnswers: string[] = ['ls', 'create new directory', 'cp', ' displaying current network configuration information', '	Bourne Again SHell'];
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute) {
+
+    this.startCountdown();
+    this.cliResults = this.score;
+   }
 
   ngOnInit() {
 
@@ -56,14 +63,38 @@ cliAnswers: string[] = ['ls', 'create new directory', 'cp', ' displaying current
     }
     resultsPage() {
       this.score = this.getResuts();
+      this.cliResults = this.score;
       this.percentage = this.getPer(this.score);
-      this.router.navigate(['/results'], { queryParams: { percentage: this.percentage, score:this.score  } });
+      this.router.navigate(['/results'], { queryParams: { percentage: this.percentage, score:this.score, cliResults:this.cliResults } });
   
     }
     getPer(score){
-
+      this.counter=0;
       this.percentage= (score/5)*100;
       return this.percentage;
+        }
+     startCountdown() {
+          this.counter = 15;
+      
+          this.interval = setInterval(() => {
+      
+            this.counter--;
+      
+            if (this.counter <= 0) {
+      
+              // The code here will run when
+              // the timer has reached zero.
+              clearInterval(this.interval);
+              this.score = this.getResuts();
+              this.cliResults = this.score;
+              this.percentage = this.getPer(this.score);
+              this.router.navigate(['/results'], { queryParams: { counter: this.counter, percentage: this.percentage, score: this.score, cliResults:this.cliResults } });
+      
+              console.log('Ding!');
+            };
+          }, 1000);
+      
+          return this.counter;
         }
       
 

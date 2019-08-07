@@ -1,12 +1,15 @@
 
 .bg{
-   // background-image: url('/assets/images/anatomy-biology-bone-2678059-removebg-preview.png');
+    //background-image: url('/assets/icon/images/close-up-code-coding-1089440.jpg');
     height: 100%;
     background-repeat: no-repeat;
     //background-attachment: fixed;
     background-position: center; 
     background-origin: content-box;
     background-size: cover;
+    opacity: 0.5;
+    filter: alpha(opacity=50)
+    
 }
 
 h1 {
@@ -19,7 +22,11 @@ h1 {
   text-shadow: slategray 3px 2px 0;
   position: relative;
   text-align: center;
-  top: 10%;
+  top: 0;
+  background-image: url('/assets/icon/images/giphy.gif');
+  font-size: 14;
+  border-radius: 10px;
+  border: 3px solid #BADA55;
 
 }
 
@@ -27,19 +34,21 @@ h1 {
 
 .bBody{
 
-  top:50%;
+ top:0;
   left: 0;
   right: 0;
   position: absolute;
   font: 95% Arial, Helvetica, sans-serif;
     max-width: 350px;
     margin: 10px auto;
-    padding: 7px;
+    padding: 10px;
  
   text-align: center;
 
 }
-h2 span{
-  //background-color: slategray;
-  font-size: 14;
+
+ion-button{
+  text-align: center;
+  
+
 }
