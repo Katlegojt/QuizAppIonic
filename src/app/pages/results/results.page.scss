@@ -1,4 +1,59 @@
+$red: #A4231F;
+$red-lt: #CB262E;
+$white: #fff;
+$black: #252225;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
+body {
+ 
+  background-size: cover;
+  font-family: 'Open Sans';
+  font-size: 14px;
+}
+.bottom,
+.paper {
+  margin: 2rem auto;
+}
+.bottom {
+  background-color: $red;
+  height: 550px;
+  max-width: 350px;
+  transform: rotate(-7.5deg);
+  width: 100%;
+}
+.paper {
+  background-color: $white;
+  box-shadow: -1px 3px 3px 3px #222;
+  font-size: 4rem;
+  height: 450px;
+  max-width: 250px;
+  line-height: 1;
+  padding: 2.5rem 4rem;
+  position: relative;
+  text-transform: uppercase;
+  transform: rotate(7.5deg);
+  width: 100%;
+  z-index: 10px;
+  p {
+    margin-top: 0;
+    &:after {
+      bottom: 50px;
+      color: $red-lt;
+      content: "\f004";
+      font-family: fontAwesome;
+      font-size: 2rem;
+      position: absolute;
+      right: 50px;
+    }
+  }
+}
+.highlight {
+  color: $red-lt;
+  &:last-child {
+    display: block;
+  }
+}
 
+/////////////////////////////////
 .success-checkmark {
     width: 80px;
     height: 115px;
@@ -258,6 +313,13 @@ body{
 
 ion-text{
 
-  text-align: center
+  text-align: center;
+}
+///////////////////////////////
+
+.contentCente{
+
+  text-align: center;
+
 }
   

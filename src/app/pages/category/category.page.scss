@@ -1,54 +1,140 @@
 
-.bg{
-    //background-image: url('/assets/icon/images/close-up-code-coding-1089440.jpg');
-    height: 100%;
-    background-repeat: no-repeat;
-    //background-attachment: fixed;
-    background-position: center; 
-    background-origin: content-box;
-    background-size: cover;
-    opacity: 0.5;
-    filter: alpha(opacity=50)
+// .bg{
+//     background-color: orangered;
+//     height: 100%;
+//     background-repeat: no-repeat;
+//     //background-attachment: fixed;
+//     background-position: center; 
+//     background-origin: content-box;
+//     background-size: cover;
+//     opacity: 0.5;
+//     filter: alpha(opacity=50)
     
-}
+// }
 
-h1 {
-  font-family: 'Open Sans', sans-serif;
-  color: #43D1AF;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 46px;
-  font-weight: 700;
-  text-shadow: slategray 3px 2px 0;
-  position: relative;
-  text-align: center;
-  top: 0;
-  background-image: url('/assets/icon/images/giphy.gif');
-  font-size: 14;
-  border-radius: 10px;
-  border: 3px solid #BADA55;
+// h1 {
+//   font-family: 'Open Sans', sans-serif;
+//   color: red;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   font-size: 46px;
+//   font-weight: 700;
+//   text-shadow: slategray 3px 2px 0;
+//   position: relative;
+//   text-align: center;
+//   top: 0;
+//   background-image: url('/assets/icon/images/giphy.gif');
+//   font-size: 14;
+//   border-radius: 10px;
+//   border: 3px solid red;
 
-}
+// }
 
 
 
-.bBody{
+// .bBody{
 
- top:0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  font: 95% Arial, Helvetica, sans-serif;
-    max-width: 350px;
-    margin: 10px auto;
-    padding: 10px;
+//  top:0;
+//   left: 0;
+//   right: 0;
+//   position: absolute;
+//   font: 95% Arial, Helvetica, sans-serif;
+//     max-width: 350px;
+//     margin: 10px auto;
+//     padding: 10px;
  
-  text-align: center;
+//   text-align: center;
 
-}
+// }
 
-ion-button{
-  text-align: center;
+// ion-button{
+//   text-align: center;
+//   width: 320px ;
   
 
+// }
+///////////////////////////////////////////////
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+  background : #73A580;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+   a {
+    text-decoration: none;
+  }
+  overflow: hidden;
+}
+
+.card-group {
+  position: relative;
+  display : grid;
+  grid : auto / repeat(2, 160px);
+  grid-gap : 0.5em;
+  justify-content: center;
+  margin-top : 1em; 
+  
+  .card1{
+     border-radius :  20% 0 0 0 ; 
+     background :url('/assets/icon/images/cables-connection-data-1054397.jpg');
+  }
+  .card2{
+     border-radius :  0 20% 0 0 ;
+     background :url('/assets/icon/images/capacitors-chip-circuit-2588757.jpg');
+  }
+  .card3{
+     border-radius :  0 0 0 20%; 
+     background :url('/assets/icon/images/code-codes-coding-207580 (1).jpg');
+  }
+  .card4{
+    border-radius :  0 0 20% 0; 
+    background-color: crimson
+ }
+ 
+  .card{
+    top:30%;    
+    width : 160px;
+    height : 200px;
+    display : flex;
+    justify-content: center;
+    flex-direction : column;
+    box-shadow : 5px 5px 5px 0 rgba(0,0,0,0.4);
+    position: relative;
+    cursor : pointer;       
+    background-size : cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.45);
+    background-blend-mode: multiply;
+    transition : transform .3s ease-in;
+    
+    &:hover{
+      z-index : 3;
+      transform : scale(1.2);
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    .card-desc{      
+      display : flex;
+      flex-direction: column;
+      margin-top : 7em;
+      h1{
+        padding : 0 1.5em;
+        margin : 0;
+        font-size : 2rem;
+        color : #fff;
+      }
+      a{
+        font-size : 1rem;
+        color : #A0C1D1;
+      }
+    }  
+  }  
 }

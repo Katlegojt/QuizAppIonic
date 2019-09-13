@@ -84,19 +84,19 @@ export class QuizPage implements OnInit {
     this.counter = 0;
     this.score = this.getResuts();
     this.networkResults = this.score;
-    this.percentage = this.getPer(this.score);
+    this.percentage = (this.score / 5) * 100;
     this.router.navigate(['/results'], { queryParams: { counter: this.counter, percentage: this.percentage, score: this.score, networkResults:this.networkResults } });
 
   }
   //percantage calculator
-  getPer(score) {
+  // getPer() {
 
-    this.percentage = (score / 5) * 100;
-    return this.percentage;
-  }
+  //   this.percentage = (this.score / 5) * 100;
+  //   return this.percentage;
+  // }
   //count down timer
   startCountdown() {
-    this.counter = 15;
+    this.counter = 30;
 
     this.interval = setInterval(() => {
 
@@ -107,9 +107,9 @@ export class QuizPage implements OnInit {
         // The code here will run when
         // the timer has reached zero.
         clearInterval(this.interval);
-        this.score = this.getResuts();
+     
         this.networkResults = this.score;
-        this.percentage = this.getPer(this.score);
+        this.percentage = (this.score / 5) * 100;
         this.router.navigate(['/results'], { queryParams: { counter: this.counter, percentage: this.percentage, score: this.score, networkResults:this.networkResults } });
 
         console.log('Ding!');

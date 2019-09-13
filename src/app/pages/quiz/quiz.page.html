@@ -1,17 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Network Quiz</ion-title>
+    <ion-title>Networks Quiz</ion-title>
     <ion-label color="primary" slot="end">{{counter}}</ion-label>
-    <ion-buttons slot="start">
-        <ion-back-button routerLink='/category'></ion-back-button>
-      </ion-buttons>
+   
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
   <ion-radio-group [(ngModel)]="myRadio0">
-      <ion-list-header>
+      <ion-list-header color="primary">
         <ion-label>{{networkQuestions[0]}}</ion-label>
       </ion-list-header>
   
@@ -31,7 +29,7 @@
       </ion-item>
     </ion-radio-group>
     <ion-radio-group [(ngModel)]="myRadio1">
-        <ion-list-header>
+        <ion-list-header color="primary">
           <ion-label>{{networkQuestions[1]}}</ion-label>
         </ion-list-header>
     
@@ -52,7 +50,7 @@
       </ion-radio-group>
 
   <ion-radio-group [(ngModel)]="myRadio2">
-      <ion-list-header>
+      <ion-list-header color="primary">
         <ion-label>{{networkQuestions[2]}}</ion-label>
       </ion-list-header>
   
@@ -73,7 +71,7 @@
     </ion-radio-group>
 
   <ion-radio-group [(ngModel)]="myRadio3">
-      <ion-list-header>
+      <ion-list-header color="primary">
         <ion-label>{{networkQuestions[3]}}</ion-label>
       </ion-list-header>
   
@@ -93,7 +91,7 @@
       </ion-item>
     </ion-radio-group>
   <ion-radio-group [(ngModel)]="myRadio4">
-      <ion-list-header>
+      <ion-list-header color="primary">
         <ion-label>{{networkQuestions[4]}}</ion-label>
       </ion-list-header>
   
@@ -114,7 +112,7 @@
     </ion-radio-group>
 
  
-  <ion-button (click)="resultsPage()"> Submit Answers</ion-button>
+  <ion-button shape="round" expand="block" (click)="resultsPage()"> Submit Answers</ion-button>
 
 
 </ion-content>

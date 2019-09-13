@@ -62,19 +62,19 @@ cliAnswers: string[] = ['ls', 'create new directory', 'cp', ' displaying current
   
     }
     resultsPage() {
-      this.score = this.getResuts();
-      this.cliResults = this.score;
-      this.percentage = this.getPer(this.score);
+      
+     this.getResuts();
+      this.percentage = (this.score / 5) * 100;
       this.router.navigate(['/results'], { queryParams: { percentage: this.percentage, score:this.score, cliResults:this.cliResults } });
   
     }
-    getPer(score){
-      this.counter=0;
-      this.percentage= (score/5)*100;
-      return this.percentage;
-        }
+    // getPer(score){
+    //   this.counter=0;
+    //   this.percentage= (score/5)*100;
+    //   return this.percentage;
+    //     }
      startCountdown() {
-          this.counter = 15;
+          this.counter = 30;
       
           this.interval = setInterval(() => {
       
@@ -85,9 +85,8 @@ cliAnswers: string[] = ['ls', 'create new directory', 'cp', ' displaying current
               // The code here will run when
               // the timer has reached zero.
               clearInterval(this.interval);
-              this.score = this.getResuts();
-              this.cliResults = this.score;
-              this.percentage = this.getPer(this.score);
+              this.getResuts();
+              this.percentage = (this.score / 5) * 100;
               this.router.navigate(['/results'], { queryParams: { counter: this.counter, percentage: this.percentage, score: this.score, cliResults:this.cliResults } });
       
               console.log('Ding!');

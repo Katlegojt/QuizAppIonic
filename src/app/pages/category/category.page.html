@@ -1,18 +1,42 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>Category</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="bg"> </div> 
-   
-      <div class="bBody">
+      <!-- <div class="bBody">
           <h1><span>Welcome To Computer Quizz App</span></h1>
-        <ion-button color="primary"(click)="onNetworkSub()" size="large">Computer Networks</ion-button><br>
-        <ion-button  color="primary" (click)="onCLISub()" size="large">Command Line Interface</ion-button><br>
-        <ion-button  color="primary" (click)="onHardwareSub()" size="large">Computer Hardware </ion-button>
+        <ion-button color="danger"(click)="onNetworkSub()" size="large">Computer Networks</ion-button><br>
+        <ion-button  color="danger" (click)="onHardwareSub()" size="large">Computer Hardware </ion-button><br>
+        <ion-button  color="danger" (click)="onCLISub()" size="large">Command Line </ion-button>
+      </div> -->
+      <h1>Computer Quiz</h1>
+      <div class="bBody">
+      <div class="card-group">
+        <div class="card card1">
+          <div class="card-desc">
+              <ion-button color="primary"(click)="onNetworkSub()" >Networks</ion-button><br>
+          </div>
+        </div>
+         <div class="card card2">
+          <div class="card-image"></div>
+          <div class="card-desc">
+            
+              <ion-button  color="primary" (click)="onHardwareSub()" >Hardware </ion-button><br>
+          </div>
+        </div>
+        <div class="card card3">
+          <div class="card-image"></div>
+          <div class="card-desc">
+              <ion-button  color="primary" (click)="onCLISub()" >Command Line</ion-button>
+          </div>
+        </div>
+        <div class="card card4">
+          <div class="card-desc">
+          </div>
+        </div>
       </div>
-   
-  
+    </div>
 </ion-content>
